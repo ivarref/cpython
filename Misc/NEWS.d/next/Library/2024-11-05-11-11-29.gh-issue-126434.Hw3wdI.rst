@@ -1,0 +1,1 @@
+multiprocessing.Event now uses RLock so that .set() cannot be deadlocked by .is_set() when invoked by a sigterm handler
