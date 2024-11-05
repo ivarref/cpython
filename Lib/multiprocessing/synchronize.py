@@ -328,7 +328,7 @@ class Condition(object):
 class Event(object):
 
     def __init__(self, *, ctx):
-        self._cond = ctx.Condition(ctx.Lock())
+        self._cond = ctx.Condition(ctx.RLock())
         self._flag = ctx.Semaphore(0)
 
     def is_set(self):
